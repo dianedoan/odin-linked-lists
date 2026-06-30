@@ -83,7 +83,7 @@ class LinkedList {
 
 	// returns the value of the node at the given index
 	at(index) {
-		// no nde at the given index
+		// no node at the given index
 		if (index >= this.size()) {
 			return undefined;
 		}
@@ -137,6 +137,26 @@ class LinkedList {
 		}
 
 		return false;
+	}
+
+	// returns the index of the node containing the given value
+	findIndex(value) {
+		// value cannot be found in the list
+		if (!this.contains(value)) return -1;
+
+		let currentIndex = 0;
+
+		// start at head node
+		let current = this.headNode;
+		
+		while (current.value !== value) {
+			currentIndex++;
+
+			// go to next node
+			current = current.nextNode;
+		}
+		
+		return currentIndex;
 	}
 }
 
