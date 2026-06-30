@@ -1,6 +1,6 @@
 class LinkedList {
 	constructor() {
-		this.head = null;
+		this.headNode = null;
 	}
 
 	// add a new node containing a value to end of list
@@ -8,12 +8,12 @@ class LinkedList {
 		// create new node
 		const newNode = new Node(value);
 
-		// if empty list, set new node as head
-		if (!this.head) {
-			this.head = newNode;
+		// if empty list, set new node as headNode
+		if (!this.headNode) {
+			this.headNode = newNode;
 		} else {
 			// start at head node
-			let current = this.head;
+			let current = this.headNode;
 
 			// find the end of the list
 			while (current.nextNode !== null) {
@@ -31,10 +31,10 @@ class LinkedList {
 		const newNode = new Node(value);
 
 		// set current head node as the next node for new node
-		newNode.nextNode = this.head;
+		newNode.nextNode = this.headNode;
 
 		// set new node as the head
-		this.head = newNode;
+		this.headNode = newNode;
 	}
 
 	// return the total number of nodes in the list
@@ -43,7 +43,7 @@ class LinkedList {
 		let size = 0;
 		
 		// start at head node
-		let current = this.head;
+		let current = this.headNode;
 
 		// keep moving until the end of the list
 		while (current !== null) {
@@ -52,6 +52,16 @@ class LinkedList {
 		}
 
 		return size;
+	}
+
+	// return the value of the first node in the list
+	head() {
+		// empty list
+		if (!this.headNode) {
+			return undefined;
+		}
+		
+		return this.headNode.value;
 	}
 }
 
