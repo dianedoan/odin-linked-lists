@@ -102,6 +102,21 @@ class LinkedList {
 
 		return current.value;
 	}
+
+	// removes the head node from the list and returns the value
+	pop() {
+		// empty list
+		if (!this.headNode) {
+			return undefined;
+		}
+
+		const removedNode = this.headNode;
+
+		// set nextNode as new head
+		this.headNode = removedNode.nextNode;
+
+		return removedNode.value;
+	}
 }
 
 class Node {
