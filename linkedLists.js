@@ -117,6 +117,27 @@ class LinkedList {
 
 		return removedNode.value;
 	}
+
+	// returns true if the passed in value is in the list and otherwise return false
+	contains(value) {
+		// empty list
+		if (!this.headNode) {
+			return false;
+		}
+
+		let current = this.headNode;
+
+		// traverse list for value
+		while (current !== null) {
+			if (current.value === value) {
+				return true;
+			}
+			// go to next node
+			current = current.nextNode;
+		}
+
+		return false;
+	}
 }
 
 class Node {
