@@ -24,6 +24,18 @@ class LinkedList {
 			current.nextNode = newNode;
 		}
 	}
+
+	// adds a new node containing a value to the start of the list
+	prepend(value) {
+		// create new node
+		const newNode = new Node(value);
+
+		// set current head node as the next node for new node
+		newNode.nextNode = this.head;
+
+		// set new node as the head
+		this.head = newNode;
+	}
 }
 
 class Node {
