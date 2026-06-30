@@ -36,6 +36,23 @@ class LinkedList {
 		// set new node as the head
 		this.head = newNode;
 	}
+
+	// return the total number of nodes in the list
+	size() {
+		// counter
+		let size = 0;
+		
+		// start at head node
+		let current = this.head;
+
+		// keep moving until the end of the list
+		while (current !== null) {
+			size++;
+			current = current.nextNode // move to next node
+		}
+
+		return size;
+	}
 }
 
 class Node {
