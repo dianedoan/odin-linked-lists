@@ -158,6 +158,31 @@ class LinkedList {
 		
 		return currentIndex;
 	}
+
+	// prints out a string representation of the LinkedList objects to the console
+	toString() {
+		let string = ''
+
+		// empty list
+		if (!this.headNode) {
+			return string;
+		}
+
+		let current = this.headNode;
+
+		// go through list
+		while (current !== null) {
+			// add object as string
+			string += `( ${current.value} ) -> `;
+
+			// go to next node
+			current = current.nextNode;
+		}
+
+		string += `null`;
+
+		return string;
+	}
 }
 
 class Node {
