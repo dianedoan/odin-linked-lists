@@ -19,8 +19,8 @@ The `LinkedList` class / factory contains the following functions:
 - `findIndex(value)` returns the index of the node containing the given value
   - If the value can't be found in the list, it returns `-1`
   - If more than one node has a value matching the given value, it returns the index of the first node with the matching value
-- `toString()` represents the `LinkedList` objects as strings, so you can print them out and preview them in the console
-  - If the list is empty, it returns an empty string with the format: `( value ) -> ( value ) -> ( value ) -> null`
+- `toString()` represents the `LinkedList` objects as strings, so you can print them out and preview them in the console with the format: `( value ) -> ( value ) -> ( value ) -> null`
+  - If the list is empty, it returns an empty string
 
 ## Description
 This project demonstrates the skills learnt from the JavaScript Course in The Odin Project up until the [Common Data Structures and Algorithms](https://www.theodinproject.com/lessons/javascript-common-data-structures-and-algorithms) topic.
