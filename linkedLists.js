@@ -60,8 +60,25 @@ class LinkedList {
 		if (!this.headNode) {
 			return undefined;
 		}
-		
+
 		return this.headNode.value;
+	}
+
+	// returns the value of the final node in the list
+	tail() {
+		// empty list
+		if (!this.headNode) {
+			return undefined;
+		}
+
+		let current = this.headNode;
+
+		// go to end of list
+		while (current.nextNode !== null) {
+			current = current.nextNode;
+		}
+
+		return current.value;
 	}
 }
 
