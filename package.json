@@ -1,0 +1,13 @@
+{
+  "name": "odin-linked-lists",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "This project consists of two classes / factories:\r - `LinkedList` which represents the full list\r - `Node` which contains a `value` property and a `nextNode` property set both as `null` by default",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
