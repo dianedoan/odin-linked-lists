@@ -80,6 +80,28 @@ class LinkedList {
 
 		return current.value;
 	}
+
+	// returns the value of the node at the given index
+	at(index) {
+		// no nde at the given index
+		if (index >= this.size()) {
+			return undefined;
+		}
+
+		let currentIndex = 0;
+
+		// start at head node
+		let current = this.headNode;
+
+		// go to node at index
+		while (currentIndex < index) {
+			currentIndex++;
+			// move to next node
+			current = current.nextNode;
+		}
+
+		return current.value;
+	}
 }
 
 class Node {
