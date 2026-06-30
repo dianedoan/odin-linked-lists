@@ -23,7 +23,6 @@ class LinkedList {
 			// last node in list points to new node
 			current.nextNode = newNode;
 		}
-
 	}
 }
 
@@ -33,3 +32,5 @@ class Node {
 		this.nextNode = nextNode;
 	}
 }
+
+export { LinkedList, Node };
